@@ -13,6 +13,12 @@
 		BC89E7A5256B735D00185C87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC89E7A3256B735D00185C87 /* Main.storyboard */; };
 		BC89E7A7256B736000185C87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC89E7A6256B736000185C87 /* Assets.xcassets */; };
 		BC89E7AA256B736000185C87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC89E7A8256B736000185C87 /* LaunchScreen.storyboard */; };
+		BC89E7B3256CBD8800185C87 /* CardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E7B2256CBD8800185C87 /* CardGame.swift */; };
+		BC89E7B6256CC15A00185C87 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E7B5256CC15A00185C87 /* Card.swift */; };
+		BC89E7B9256CC7E700185C87 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC89E7B8256CC7E700185C87 /* CardView.xib */; };
+		BC89E7BC256CC8C700185C87 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC89E7BB256CC8C700185C87 /* CardView.swift */; };
+		BCA7CB6F256CD0F800DDA7CD /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7CB6E256CD0F800DDA7CD /* UIView+extensions.swift */; };
+		BCA7CB73257177A100DDA7CD /* PokerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA7CB72257177A100DDA7CD /* PokerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		BC89E7A6256B736000185C87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC89E7A9256B736000185C87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC89E7AB256B736000185C87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC89E7B2256CBD8800185C87 /* CardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGame.swift; sourceTree = "<group>"; };
+		BC89E7B5256CC15A00185C87 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BC89E7B8256CC7E700185C87 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		BC89E7BB256CC8C700185C87 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		BCA7CB6E256CD0F800DDA7CD /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
+		BCA7CB72257177A100DDA7CD /* PokerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,35 @@
 			children = (
 				BC89E79D256B735D00185C87 /* AppDelegate.swift */,
 				BC89E79F256B735D00185C87 /* SceneDelegate.swift */,
-				BC89E7A1256B735D00185C87 /* ViewController.swift */,
-				BC89E7A3256B735D00185C87 /* Main.storyboard */,
+				BC89E7B2256CBD8800185C87 /* CardGame.swift */,
+				BC89E7B5256CC15A00185C87 /* Card.swift */,
+				BC89E7BE256CC95300185C87 /* Views */,
+				BCA7CB6D256CD0D900DDA7CD /* Utilities */,
 				BC89E7A6256B736000185C87 /* Assets.xcassets */,
 				BC89E7A8256B736000185C87 /* LaunchScreen.storyboard */,
 				BC89E7AB256B736000185C87 /* Info.plist */,
 			);
 			path = CardDeck;
+			sourceTree = "<group>";
+		};
+		BC89E7BE256CC95300185C87 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BC89E7A1256B735D00185C87 /* ViewController.swift */,
+				BC89E7A3256B735D00185C87 /* Main.storyboard */,
+				BC89E7BB256CC8C700185C87 /* CardView.swift */,
+				BCA7CB72257177A100DDA7CD /* PokerButton.swift */,
+				BC89E7B8256CC7E700185C87 /* CardView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BCA7CB6D256CD0D900DDA7CD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BCA7CB6E256CD0F800DDA7CD /* UIView+extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +160,7 @@
 			files = (
 				BC89E7AA256B736000185C87 /* LaunchScreen.storyboard in Resources */,
 				BC89E7A7256B736000185C87 /* Assets.xcassets in Resources */,
+				BC89E7B9256CC7E700185C87 /* CardView.xib in Resources */,
 				BC89E7A5256B735D00185C87 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,9 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCA7CB6F256CD0F800DDA7CD /* UIView+extensions.swift in Sources */,
 				BC89E7A2256B735D00185C87 /* ViewController.swift in Sources */,
+				BC89E7B3256CBD8800185C87 /* CardGame.swift in Sources */,
+				BC89E7B6256CC15A00185C87 /* Card.swift in Sources */,
 				BC89E79E256B735D00185C87 /* AppDelegate.swift in Sources */,
+				BC89E7BC256CC8C700185C87 /* CardView.swift in Sources */,
 				BC89E7A0256B735D00185C87 /* SceneDelegate.swift in Sources */,
+				BCA7CB73257177A100DDA7CD /* PokerButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

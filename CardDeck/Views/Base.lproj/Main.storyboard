@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CardDeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsU-H3-BRe" customClass="PokerButton" customModule="CardDeck" customModuleProvider="target">
+                                <rect key="frame" x="27" y="97" width="100" height="37"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="KhW-GZ-QdS"/>
+                                    <constraint firstAttribute="height" constant="37" id="N6H-nT-gkb"/>
+                                </constraints>
+                                <state key="normal" title="New Hand"/>
+                                <connections>
+                                    <action selector="newHandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSW-Vu-o3A"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ZU-03-90M">
+                                <rect key="frame" x="20" y="187" width="350" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Xih-NN-7O1"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSy-P7-9l3" customClass="PokerButton" customModule="CardDeck" customModuleProvider="target">
+                                <rect key="frame" x="27" y="323" width="108" height="36"/>
+                                <color key="backgroundColor" red="0.88706339314507043" green="0.98336769702439353" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="e7c-Vv-CHG"/>
+                                </constraints>
+                                <state key="normal" title="Show Hand"/>
+                                <connections>
+                                    <action selector="showHandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XFb-iV-9RE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hand Combo!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqs-TG-miW">
+                                <rect key="frame" x="27" y="381" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDF-kd-mjK" customClass="PokerButton" customModule="CardDeck" customModuleProvider="target">
+                                <rect key="frame" x="162" y="323" width="134" height="36"/>
+                                <color key="backgroundColor" red="0.92950425520000002" green="1" blue="0.98495427449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Replace Cards"/>
+                                <connections>
+                                    <action selector="replaceCardsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tI9-ZH-iG5"/>
+                                    <action selector="showHandPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEz-ui-8Tz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EsU-H3-BRe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="4wd-dG-873"/>
+                            <constraint firstItem="xSy-P7-9l3" firstAttribute="leading" secondItem="EsU-H3-BRe" secondAttribute="leading" id="5c2-bt-wiS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xSy-P7-9l3" secondAttribute="trailing" constant="255" id="69z-XD-z79"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EsU-H3-BRe" secondAttribute="trailing" symbolic="YES" id="8ob-oV-oad"/>
+                            <constraint firstItem="xSy-P7-9l3" firstAttribute="top" secondItem="2ZU-03-90M" secondAttribute="bottom" constant="51" id="9LQ-IF-XnG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LDF-kd-mjK" secondAttribute="trailing" constant="94" id="BCa-8r-iwR"/>
+                            <constraint firstItem="pqs-TG-miW" firstAttribute="top" secondItem="xSy-P7-9l3" secondAttribute="bottom" constant="22" id="K3K-7j-peP"/>
+                            <constraint firstItem="LDF-kd-mjK" firstAttribute="firstBaseline" secondItem="xSy-P7-9l3" secondAttribute="baseline" id="Mgt-Q1-A3i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ZU-03-90M" secondAttribute="trailing" constant="20" id="Qt0-wq-QOd"/>
+                            <constraint firstItem="2ZU-03-90M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VBY-V6-ozd"/>
+                            <constraint firstItem="EsU-H3-BRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="aeL-lo-C2r"/>
+                            <constraint firstItem="2ZU-03-90M" firstAttribute="top" secondItem="EsU-H3-BRe" secondAttribute="bottom" constant="53" id="jho-hm-pPS"/>
+                            <constraint firstItem="pqs-TG-miW" firstAttribute="leading" secondItem="xSy-P7-9l3" secondAttribute="leading" id="mXy-eQ-J4t"/>
+                            <constraint firstItem="LDF-kd-mjK" firstAttribute="top" secondItem="xSy-P7-9l3" secondAttribute="top" id="pE6-uj-aru"/>
+                            <constraint firstItem="pqs-TG-miW" firstAttribute="trailing" secondItem="2ZU-03-90M" secondAttribute="trailing" id="vaK-bZ-Mw0"/>
+                            <constraint firstItem="LDF-kd-mjK" firstAttribute="leading" secondItem="xSy-P7-9l3" secondAttribute="trailing" constant="27" id="xqZ-rQ-TeT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pqs-TG-miW" secondAttribute="bottom" constant="395" id="zbu-zK-ZRV"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="comboLabel" destination="pqs-TG-miW" id="ot9-uV-7dF"/>
+                        <outlet property="handStack" destination="2ZU-03-90M" id="gid-sQ-aJH"/>
+                        <outlet property="newHandButton" destination="EsU-H3-BRe" id="WXh-uA-ySq"/>
+                        <outlet property="replaceCardsButton" destination="LDF-kd-mjK" id="yOx-bv-cqg"/>
+                        <outlet property="showHandButton" destination="xSy-P7-9l3" id="I2Q-us-6H9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.38461538461539" y="83.886255924170612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
